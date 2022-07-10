@@ -1,0 +1,20 @@
+type Query {
+  getCourse(title:String): Course
+}
+
+type Course {
+  id: ID
+  title: String
+  description: String
+  weeks: String
+  minimumSkill: String
+}
+
+type Mutation {
+  addCourse(title: String,
+  description: String,
+  weeks: String,
+  minimumSkill: String): Course
+  deleteCourseByTitle(title: String): Course
+  updateCourseByTitle(title: String, newTitle: String): Course
+}
